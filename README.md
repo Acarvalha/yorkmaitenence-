@@ -1,2 +1,3 @@
 # MathPals
 ...
+figmalink: https://www.figma.com/design/WQCDbqZotJvvBe79ocpci2/Untitled?node-id=0-1&p=f
