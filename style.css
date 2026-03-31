@@ -75,3 +75,45 @@ a {
 .nav-links a:hover {
   text-decoration: underline;
 }
+.rightside {
+  background-color: #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.borderbox {
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.greyhead {
+  background-color: #ddd;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+.redbtn {
+  background-color: #d90404;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.navbtn {
+  background-color: #d90404;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
