@@ -50,30 +50,77 @@ a {
 
 .custom-nav {
   background-color: #d90404;
-  padding: 10px;
+  padding: 12px 25px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
 }
 
 .nav-title {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
   color: white;
-  margin-left: 15px;
+  padding: 6px 10px;
   text-decoration: none;
   font-weight: 500;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+<!--Logoutbtn styles -- > .logout-btn {
+  background-color: white;
+  color: #d90404 !important;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #f3f3f3;
+}
+
+<!--Account Info styles -- > .account-card {
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.role-badge {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.security-note {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
 }
 .rightside {
   background-color: #ddd;

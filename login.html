@@ -25,7 +25,7 @@
           <!--<a href="admin-dashboard.html"></a> -->
           <a href="submit-request.html">Submit</a>
           <a href="account-info.html">Account</a>
-          <a href="login.html">Logout</a>
+          <a href="login.html" class="logout-btn">Logout</a>
         </div>
       </div>
     </nav>
@@ -76,8 +76,8 @@
         <!-- DEMO INFO -->
         <div class="text-center mt-3 p-2 bg-light rounded">
           <small class="text-muted">
-            Demo: email <strong>demo@my.yoku.ca</strong> / password
-            <strong>password@yorku</strong>
+            Demo email: <strong>demo@yoku.ca</strong> / password:
+            <strong>password@york</strong>
           </small>
         </div>
 
@@ -99,7 +99,12 @@
         const role = document.getElementById("role").value;
         const errorMsg = document.getElementById("errorMsg");
 
-        if (email === "demo@system.com" && password === "password") {
+        if (email === "demo@yorku.ca" && password === "password@york") {
+          // store user info
+          localStorage.setItem("userEmail", email);
+          localStorage.setItem("userName", email.split("@")[0]);
+
+          // redirect to different pages based on role
           if (role === "user") {
             window.location.href = "my-requests.html";
           } else if (role === "staff") {
