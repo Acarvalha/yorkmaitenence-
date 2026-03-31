@@ -16,7 +16,7 @@
   <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger px-3">
-      <a class="navbar-brand fw-bold" href="#">Maintenance System</a>
+      <a class="navbar-brand fw-bold" href="#">Maintenance Request System</a>
 
       <!-- HAMBURGER BUTTON -->
       <button
@@ -113,14 +113,17 @@
         if (email === "demo@yorku.ca" && password === "password@york") {
           // store user info
           localStorage.setItem("userEmail", email);
-          localStorage.setItem("userName", email.split("@")[0]);
+          localStorage.setItem("userRole", role);
 
           // redirect to different pages based on role
           if (role === "user") {
+            localStorage.setItem("userName", "Hana Smith");
             window.location.href = "my-requests.html";
           } else if (role === "staff") {
+            localStorage.setItem("userName", "Alex Brown");
             window.location.href = "staff-dashboard.html";
           } else if (role === "admin") {
+            localStorage.setItem("userName", "Jordan Lee");
             window.location.href = "admin-dashboard.html";
           } else {
             alert("Please select a role");

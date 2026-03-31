@@ -81,6 +81,27 @@ body {
   background-color: #2563eb !important;
 }
 
+.request-wrapper {
+  max-width: 520px;
+  background-color: white;
+  border: 1px solid #cfcfcf;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.request-header {
+  background-color: #e5e5e5;
+  padding: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.request-body {
+  padding: 24px;
+}
+
 /* SETTINGS LAYOUT */
 .settings-layout {
   display: flex;
