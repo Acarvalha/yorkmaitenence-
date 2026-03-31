@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assign Requests</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="settings-layout">
+      <div class="settings-sidebar">
+        <div class="header">Admin Dashboard</div>
+        <div class="menu-heading">MENU</div>
+        <a class="menu-item" href="admin-dashboard.html">Dashboard</a>
+        <a class="menu-item active-item" href="assign-requests.html">Assign Requests</a>
+        <a class="menu-item" href="set-priorities.html">Set Priorities</a>
+        <a class="menu-item" href="manage-users.html">Manage Users</a>
+
+        <br>
+        <a href="login.html" class="redbtn" style="display: inline-block; text-decoration: none; text-align: center;">Logout</a>
+      </div>
+
+      <div class="settings-content">
+        <div class="page-title-block">
+          <h1>Assign Requests</h1>
+          <p>Select a request ID, a staff member, and a priority level.</p>
+        </div>
+
+        <div class="request-wrapper">
+          <div class="request-header">Assignment Form</div>
+          <div class="request-body">
+            <form action="#" method="get">
+              <p class="sub-section-title">Select Request ID</p>
+              <select class="form-control">
+                <option>REQ-1001</option>
+                <option>REQ-1002</option>
+                <option>REQ-1003</option>
+                <option>REQ-1004</option>
+              </select>
+
+              <p class="sub-section-title">Assign To Staff Member</p>
+              <select class="form-control">
+                <option>John Smith</option>
+                <option>Jane Doe</option>
+                <option>Mike Johnson</option>
+                <option>Sarah Lee</option>
+              </select>
+
+              <p class="sub-section-title">Set Priority</p>
+              <select class="form-control">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+
+              <br><br>
+              <button class="save-btn" type="button">Save Assignment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

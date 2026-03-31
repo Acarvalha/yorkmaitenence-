@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="settings-layout">
+      <div class="settings-sidebar">
+        <div class="header">Admin Dashboard</div>
+        <div class="menu-heading">MENU</div>
+        <a class="menu-item" href="admin-dashboard.html">Dashboard</a>
+        <a class="menu-item" href="assign-requests.html">Assign Requests</a>
+        <a class="menu-item" href="set-priorities.html">Set Priorities</a>
+        <a class="menu-item active-item" href="manage-users.html">Manage Users</a>
+
+        <br>
+        <a href="login.html" class="redbtn" style="display: inline-block; text-decoration: none; text-align: center;">Logout</a>
+      </div>
+
+      <div class="settings-content">
+        <div class="page-title-block">
+          <h1>Manage Users</h1>
+          <p>Simple user list with name, role, and current status.</p>
+        </div>
+
+        <div class="request-wrapper">
+          <div class="request-header">User Table</div>
+          <div class="request-body">
+            <table border="1" cellpadding="12" cellspacing="0">
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>John Smith</td>
+                <td>User</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>Jane Doe</td>
+                <td>Staff</td>
+                <td>Offline</td>
+              </tr>
+              <tr>
+                <td>Mike Johnson</td>
+                <td>Admin</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>Sarah Lee</td>
+                <td>Staff</td>
+                <td>Busy</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
