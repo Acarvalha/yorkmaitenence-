@@ -15,20 +15,103 @@
   </head>
   <body>
     <!--Navigation  Bar-->
-    <nav class="custom-nav">
-      <div class="nav-container">
-        <span class="nav-title">Maintenance System</span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger px-3">
+      <a class="navbar-brand fw-bold" href="#">Maintenance System</a>
 
-        <div class="nav-links">
-          <!--<a href="my-requests.html">My Requests</a> -->
-          <a href="Staffdashboard.html"></a>
-          <!--<a href="admin.dashboard.html"></a> -->
-          <a href="submit-request.html">Submit</a>
-          <a href="account-info.html">Account</a>
-          <a href="login.html" class="logout-btn">Logout</a>
-        </div>
+      <!-- HAMBURGER BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSIBLE MENU -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="submit-request.html">Submit Request</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account-info.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
       </div>
     </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container d-flex justify-content-center mt-5">
+      <div class="form-card borderbox w-100" style="max-width: 400px">
+        <!-- HEADER -->
+        <div class="greyhead text-center">SUBMIT MAINTENANCE REQUEST</div>
+
+        <!-- FORM -->
+        <div class="p-3">
+          <!-- ISSUE CATEGORY -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">ISSUE CATEGORY</label>
+            <select class="form-control">
+              <option selected disabled>Select category</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>IT</option>
+              <option>HVAC</option>
+            </select>
+          </div>
+
+          <!-- CAMPUS -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">CAMPUS</label>
+            <select class="form-control">
+              <option selected disabled>Select campus</option>
+              <option>Keele</option>
+              <option>Glendon</option>
+              <option>Markham</option>
+            </select>
+          </div>
+
+          <!-- BUILDING -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">BUILDING</label>
+            <select class="form-control">
+              <option selected disabled>Select building</option>
+              <option>Vari Hall</option>
+              <option>Curtis Lecture Hall</option>
+              <option>Accolade West</option>
+              <option>Accolade East</option>
+            </select>
+          </div>
+
+          <!-- ROOM -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">ROOM (OPTIONAL)</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="e.g. 204 or Lab B12"
+            />
+          </div>
+
+          <!-- DESCRIPTION -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">DESCRIPTION</label>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="Describe the issue in detail..."
+            ></textarea>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <button class="btn btn-primary w-100 mt-2">SUBMIT REQUEST</button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

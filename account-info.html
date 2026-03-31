@@ -14,163 +14,206 @@
     <title>Account Information</title>
   </head>
   <body>
-    <!--Navigation Bar-->
-    <nav class="custom-nav">
-      <div class="nav-container">
-        <span class="nav-title">Maintenance System</span>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger px-3">
+      <a class="navbar-brand fw-bold" href="#">Maintenance System</a>
 
-        <div class="nav-links">
-          <!--<a href="my-requests.html">My Requests</a> -->
-          <a href="Staffdashboard.html"></a>
-          <!--<a href="admin-dashboard.html"></a> -->
-          <a href="submit-request.html">Submit</a>
-          <a href="account-info.html">Account</a>
-          <a href="login.html" class="logout-btn">Logout</a>
-        </div>
+      <!-- HAMBURGER BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSIBLE MENU -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="submit-request.html">Submit Request</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account-info.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
       </div>
     </nav>
+    <!-- PAGE TITLE -->
+    <div class="page-shell">
+      <div class="page-title-block">
+        <h1>Account Settings</h1>
+        <p>Manage your profile, preferences, and York login information.</p>
+      </div>
 
-    <!-- HEADER -->
-    <div class="header">Account Information</div>
-
-    <div class="container py-4">
-      <div class="account-card mx-auto">
-        <!-- PROFILE TOP -->
-        <div class="text-center mb-4">
-          <h3 id="displayName">Hana</h3>
-          <p class="text-muted mb-1" id="displayEmail">demo@my.yorku.ca</p>
-          <span class="role-badge">User</span>
-        </div>
-
-        <!-- SUCCESS MESSAGE -->
-        <div id="successMsg" class="alert alert-success" style="display: none">
-          Account information updated successfully.
-        </div>
-
-        <!-- PROFILE DETAILS -->
-        <h5 class="section-title">Profile Details</h5>
-
-        <form onsubmit="handleUpdate(event)">
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nameInput"
-              value="Hana Smith"
-              required
-            />
+      <div class="settings-layout">
+        <!-- SIDEBAR -->
+        <aside class="settings-sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-circle">HS</div>
+            <h4 id="displayName">Hana Smith</h4>
+            <p id="displayEmail">demo@yorku.ca</p>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">York Email:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="emailInput"
-              value="demo@yorku.ca"
-              readonly
-            />
+          <div class="menu-section">
+            <p class="menu-heading">Profile</p>
+            <a href="#" class="menu-item active-item">Account Information</a>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">Username / ID:</label>
-            <input type="text" class="form-control" value="Hana" />
+          <div class="menu-section">
+            <p class="menu-heading">Preferences</p>
+            <a href="#" class="menu-item">Notification Settings</a>
+            <a href="#" class="menu-item">Preferred Campus</a>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">Role:</label>
-            <select class="form-control" id="roleSelect">
-              <option value="user" selected>User</option>
-              <option value="staff">Staff</option>
-              <option value="admin">Admin</option>
-            </select>
+          <div class="menu-section">
+            <p class="menu-heading">Security</p>
+            <a href="#" class="menu-item">York Login</a>
+            <a href="login.html" class="menu-item">Logout</a>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="settings-content">
+          <div
+            id="successMsg"
+            class="alert alert-success"
+            style="display: none"
+          >
+            Account information updated successfully.
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">Phone Number(Optional): </label>
-            <input
-              type="tel"
-              class="form-control"
-              placeholder="Enter phone number"
-            />
-          </div>
+          <h3 class="content-title">Account Information</h3>
 
-          <div class="mb-3">
-            <label class="form-label">Faculty / Department:</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Example: Faculty of Liberal Arts & Professional Studies"
-            />
-          </div>
+          <form onsubmit="handleUpdate(event)">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nameInput"
+                value="Hana Smith"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <label class="form-label">Preferred Campus:</label>
-            <select class="form-control" id="roleSelect">
-              <option value="keele" selected>Keele Campus</option>
-              <option value="glendon">Glendon Campus</option>
-              <option value="markham">Markham Campus</option>
-            </select>
-          </div>
+            <div class="mb-3">
+              <label class="form-label">York Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                value="demo@yorku.ca"
+                readonly
+              />
+            </div>
 
-          <!-- NOTIFICATIONS -->
-          <h5 class="section-title mt-4">Notification Preferences</h5>
+            <div class="mb-3">
+              <label class="form-label">Username / ID:</label>
+              <input
+                type="text"
+                class="form-control"
+                value="hana123"
+                readonly
+              />
+            </div>
 
-          <div class="form-check mb-2">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="statusUpdates"
-              checked
-            />
-            <label class="form-check-label" for="statusUpdates">
-              Email me when my request status changes
-            </label>
-          </div>
+            <div class="mb-3">
+              <label class="form-label">Role:</label>
+              <select class="form-control" id="roleSelect">
+                <option value="user" selected>User</option>
+                <option value="staff">Staff</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
 
-          <div class="form-check mb-2">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="assignmentUpdates"
-              checked
-            />
-            <label class="form-check-label" for="assignmentUpdates">
-              Email me when a staff member is assigned
-            </label>
-          </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number (Optional):</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Enter phone number"
+              />
+            </div>
 
-          <div class="form-check mb-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="completionUpdates"
-              checked
-            />
-            <label class="form-check-label" for="completionUpdates">
-              Email me when a request is completed
-            </label>
-          </div>
+            <div class="mb-3">
+              <label class="form-label">Faculty / Department:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Example: Faculty of Liberal Arts & Professional Studies"
+              />
+            </div>
 
-          <!-- SECURITY -->
-          <h5 class="section-title">Security</h5>
+            <div class="mb-4">
+              <label class="form-label">Preferred Campus:</label>
+              <select class="form-control" id="campusSelect">
+                <option value="keele" selected>Keele Campus</option>
+                <option value="glendon">Glendon Campus</option>
+                <option value="markham">Markham Campus</option>
+              </select>
+            </div>
 
-          <div class="security-note">
-            <p class="mb-2">
-              Password and two-factor authentication are managed through York
-              University login services.
-            </p>
-            <p class="mb-0 text-muted">
-              This prototype focuses on maintenance request functions, not
-              York's full authentication system.
-            </p>
-          </div>
+            <h4 class="sub-section-title">Notification Preferences</h4>
 
-          <button type="submit" class="btn btn-primary w-100 mt-4">
-            Save Changes
-          </button>
-        </form>
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="statusUpdates"
+                checked
+              />
+              <label class="form-check-label" for="statusUpdates">
+                Email me when my request status changes
+              </label>
+            </div>
+
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="assignmentUpdates"
+                checked
+              />
+              <label class="form-check-label" for="assignmentUpdates">
+                Email me when a staff member is assigned
+              </label>
+            </div>
+
+            <div class="form-check mb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="completionUpdates"
+                checked
+              />
+              <label class="form-check-label" for="completionUpdates">
+                Email me when a request is completed
+              </label>
+            </div>
+
+            <h4 class="sub-section-title">Security</h4>
+
+            <div class="security-box">
+              <p class="mb-2">
+                Password and two-factor authentication are managed through York
+                University login services.
+              </p>
+              <p class="mb-0 small-text">
+                This prototype focuses on maintenance request functionality, not
+                York’s full authentication system.
+              </p>
+            </div>
+
+            <button type="submit" class="btn save-btn w-100 mt-4">
+              Save Changes
+            </button>
+          </form>
+        </main>
       </div>
     </div>
 
