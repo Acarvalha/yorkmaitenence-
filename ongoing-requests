@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Request Status Page</title>
+          <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="styles.css">
+     </head>
+     <body>
+          <!-- This is the phone screen container-->
+          <div class="main-container">
+
+               <!-- App's page header -->
+               <div class="top">
+                    <div class="header">
+                         <h2>My Requests</h2>
+                         <svg id=menu-icon width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M10.4167 14.5833H39.5833" stroke="white" stroke-width="4"/>
+                                   <path d="M10.4167 25H25H39.5833" stroke="white" stroke-width="4"/>
+                                   <path d="M10.4167 35.4167H39.5833" stroke="white" stroke-width="4"/>
+                         </svg>
+                    </div>
+                    <div class="request-tabs">
+                         <a href="#" class="tab-btn active">Ongoing</a>
+                         <a href="#" class="tab-btn">Completed</a>
+                    </div>
+               </div>
+
+               <!-- The body of the app, contains the service request information -->
+               <div class="middle">
+                    <div class="card border-dark mb-3">
+                         <div class="card-header border-dark">
+                              <h5>Req-001</h5>
+                              <span class="submitted">Submitted</span>
+                         </div>
+                         <div class="card-body">
+                              <p class="card-text">This is a description of the requested service.</p>
+                         </div>
+                    </div>
+
+                    <div class="card border-dark mb-3">
+                         <div class="card-header border-dark">
+                              <h5>Req-002</h5>
+                              <span class="in-progress">In Progress</span>
+                         </div>
+                         <div class="card-body">
+                              <p class="card-text">This is a description of the requested service.</p>
+                         </div>
+                    </div>
+
+                    <div class="card border-dark mb-3">
+                         <div class="card-header border-dark">
+                              <h5>Req-003</h5>
+                              <span class="in-progress">In Progress</span>
+                         </div>
+                         <div class="card-body">
+                              <p class="card-text">This is a description of the requested service.</p>
+                         </div>
+                    </div>
+
+                    <div class="card border-dark mb-3">
+                         <div class="card-header border-dark">
+                              <h5>Req-004</h5>
+                              <span class="in-progress">In Progress</span>
+                         </div>
+                         <div class="card-body">
+                              <p class="card-texts">This is a description of the requested service.</p>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Bottom of the screen, has a fixed button to submit requests -->
+               <div class = "bottom">
+                    <a href="#" class="btn btn-primary">Submit New Request</a>
+               </div>
+          </div>
+     </body>
+</html>
