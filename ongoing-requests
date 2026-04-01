@@ -22,8 +22,8 @@
                          </svg>
                     </div>
                     <div class="request-tabs">
-                         <a href="#" class="tab-btn active">Ongoing</a>
-                         <a href="#" class="tab-btn">Completed</a>
+                         <a href="ongoing.html" class="tab-btn active">Ongoing</a>
+                         <a href="completed.html" class="tab-btn">Completed</a>
                     </div>
                </div>
 
