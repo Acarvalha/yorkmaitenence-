@@ -11,7 +11,37 @@
     <title>Admin Dashboard</title>
   </head>
   <body>
-    
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger px-3">
+      <a class="navbar-brand fw-bold" href="#">Maintenance Request System</a>
+
+      <!-- HAMBURGER BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSIBLE MENU -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+          </li>
+          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account-info.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="header">Admin Dashboard</div>
 
@@ -26,7 +56,9 @@
 
           <div class="menu-section">
             <p class="menu-heading">Dashboard</p>
-            <a href="admin-dashboard.html" class="menu-item active-item">Overview</a>
+            <a href="admin-dashboard.html" class="menu-item active-item"
+              >Overview</a
+            >
           </div>
 
           <div class="menu-section">
@@ -38,13 +70,20 @@
           <div class="menu-section">
             <p class="menu-heading">Administration</p>
             <a href="manage-users.html" class="menu-item">Manage Users</a>
-            <a href="account-info.html" class="menu-item">Account Information</a>
+            <a href="account-info.html" class="menu-item"
+              >Account Information</a
+            >
           </div>
 
           <a
             href="login.html"
             class="redbtn mt-3"
-            style="display: block; width: 100%; text-align: center; text-decoration: none"
+            style="
+              display: block;
+              width: 100%;
+              text-align: center;
+              text-decoration: none;
+            "
             >Logout</a
           >
         </aside>
@@ -52,7 +91,10 @@
         <main class="settings-content">
           <div class="page-title-block mb-4">
             <h1>Welcome, Admin</h1>
-            <p>Choose a tool below to manage maintenance requests and system users.</p>
+            <p>
+              Choose a tool below to manage maintenance requests and system
+              users.
+            </p>
           </div>
 
           <div class="row g-4 mb-4">
@@ -60,7 +102,10 @@
               <div class="request-wrapper" style="max-width: 100%">
                 <div class="greyhead text-center">Assign Requests</div>
                 <div class="request-body">
-                  <p>Assign incoming requests to available staff members and set an initial priority.</p>
+                  <p>
+                    Assign incoming requests to available staff members and set
+                    an initial priority.
+                  </p>
                   <a
                     href="assign-requests.html"
                     class="btn btn-primary w-100 mt-2"
@@ -74,7 +119,10 @@
               <div class="request-wrapper" style="max-width: 100%">
                 <div class="greyhead text-center">Set Priorities</div>
                 <div class="request-body">
-                  <p>Review request urgency and update priority levels for active maintenance work.</p>
+                  <p>
+                    Review request urgency and update priority levels for active
+                    maintenance work.
+                  </p>
                   <a
                     href="set-priorities.html"
                     class="btn btn-primary w-100 mt-2"
@@ -88,10 +136,11 @@
               <div class="request-wrapper" style="max-width: 100%">
                 <div class="greyhead text-center">Manage Users</div>
                 <div class="request-body">
-                  <p>View users, check staff roles, and review who is active in the system.</p>
-                  <a
-                    href="manage-users.html"
-                    class="btn btn-primary w-100 mt-2"
+                  <p>
+                    View users, check staff roles, and review who is active in
+                    the system.
+                  </p>
+                  <a href="manage-users.html" class="btn btn-primary w-100 mt-2"
                     >Open User List</a
                   >
                 </div>

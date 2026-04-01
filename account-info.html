@@ -203,10 +203,6 @@
                 Password and two-factor authentication are managed through York
                 University login services.
               </p>
-              <p class="mb-0 small-text">
-                This prototype focuses on maintenance request functionality, not
-                York’s full authentication system.
-              </p>
             </div>
 
             <button type="submit" class="btn save-btn w-100 mt-4">
@@ -218,62 +214,98 @@
     </div>
 
     <script>
-      window.onload = function () {
-        const role = localStorage.getItem("userRole");
+      function updateNavbar(role) {
         const navLinks = document.getElementById("roleNav");
 
-        if (role === "staff") {
+        if (role == "staff") {
           navLinks.innerHTML = `
-        <li class="nav-item">
-          <a class="nav-link" href="staff-dashboard.html">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="account-info.html">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Logout</a>
-        </li>
-      `;
+            <li class="nav-item">
+              <a class="nav-link" href="Staffdashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="account-info.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Logout</a>
+            </li>
+          `;
         } else if (role === "admin") {
           navLinks.innerHTML = `
-        <li class="nav-item">
-          <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="account-info.html">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Logout</a>
-        </li>
-      `;
+            <li class="nav-item">
+              <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="account-info.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Logout</a>
+            </li>
+          `;
         } else {
           navLinks.innerHTML = `
-        <li class="nav-item">
-          <a class="nav-link" href="my-requests.html">My Requests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="submit-request.html">Submit Request</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="account-info.html">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Logout</a>
-        </li>
-      `;
+            <li class="nav-item">
+              <a class="nav-link" href="my-requests.html">My Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="submit-request.html">Submit Request</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="account-info.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Logout</a>
+            </li>
+          `;
         }
-      };
-    </script>
+      }
+      function updateProfileCircle(name) {
+        const circle = document.getElementById("profileCircle");
+        const parts = name.trim().split(" ");
+        let initials = "";
 
-    <script>
+        if (parts.length >= 2) {
+          initials = parts[0][0] + parts[1][0];
+        } else if (parts.length === 1 && parts[0].length > 0) {
+          initials = parts[0][0];
+        } else {
+          initials = "U";
+        }
+
+        circle.innerText = initials.toUpperCase();
+      }
+
+      window.onload = function () {
+        const role = localStorage.getItem("userRole") || "user";
+        const name = localStorage.getItem("userName") || "Hana Smith";
+        const email = localStorage.getItem("userEmail") || "demo@yorku.ca";
+
+        document.getElementById("displayName").innerText = name;
+        document.getElementById("displayEmail").innerText = email;
+        document.getElementById("nameInput").value = name;
+        document.getElementById("emailInput").value = email;
+        document.getElementById("roleSelect").value = role;
+
+        updateProfileCircle(name);
+        updateNavbar(role);
+      };
+
       function handleUpdate(event) {
         event.preventDefault();
 
         const name = document.getElementById("nameInput").value;
         const email = document.getElementById("emailInput").value;
+        const role = document.getElementById("roleSelect").value;
+
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userRole", role);
 
         document.getElementById("displayName").innerText = name;
         document.getElementById("displayEmail").innerText = email;
+
+        updateProfileCircle(name);
+        updateNavbar(role);
+
         document.getElementById("successMsg").style.display = "block";
       }
     </script>
