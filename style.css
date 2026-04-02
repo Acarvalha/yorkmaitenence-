@@ -8,11 +8,12 @@ body {
 /* NAVBAR (Bootstrap override) */
 .navbar {
   box-shadow: none;
+  background-color: #d90404;
+  height: 70px;
 }
 
 .navbar-brand {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
 }
 
 .nav-link {
@@ -44,7 +45,7 @@ body {
   background-color: #3b82f6 !important;
   border: none;
   border-radius: 10px;
-  padding: 12px;
+  padding: 8px 14px;
   font-weight: bold;
 }
 
@@ -96,15 +97,21 @@ body {
   color: #111827;
 }
 
-.requests-tabs {
+.requests-header{
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
   border-bottom: 1px solid #ddd;
   padding-bottom: 12px;
 }
 
+.requests-tabs {
+  display: flex;
+  gap: 12px;
+}
+
 .tab-link {
   text-decoration: none;
+  border: none;
   color: #555;
   font-weight: 600;
   padding: 8px 14px;
@@ -149,23 +156,25 @@ body {
 }
 
 .status-pill {
-  padding: 6px 14px;
+  width:100px;
+  padding: 5px 10px;
   border-radius: 14px;
   font-weight: 700;
   font-size: 14px;
   color: white;
+  text-align: center;
 }
 
 .status-submitted {
-  background-color: #6b7280;
+  background-color: #5E5E5E;
 }
 
 .status-progress {
-  background-color: #c4a700;
+  background-color: #BCA70B;
 }
 
 .status-completed {
-  background-color: #16a34a;
+  background-color: #098637;
 }
 
 .request-wrapper {
@@ -352,7 +361,7 @@ body {
 
 .tab-btn {
   background: none;
-  border: none;
+  border: 0;
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
   font-weight: bold;
