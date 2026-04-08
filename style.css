@@ -8,8 +8,7 @@ body {
 /* NAVBAR (Bootstrap override) */
 .navbar {
   box-shadow: none;
-  background-color: #d90404;
-  height: 70px;
+  background-color: #d90404 !important;
 }
 
 .navbar-brand {
@@ -156,11 +155,11 @@ body {
 }
 
 .status-pill {
-  width:100px;
+  width:110px;
   padding: 5px 10px;
   border-radius: 14px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   text-align: center;
 }
@@ -341,7 +340,7 @@ body {
 
 /*Header Design*/
 .top {
-  background-color: red;
+  background-color: d90404;
   color: #fff;
   padding: 5px 10px;
 }
