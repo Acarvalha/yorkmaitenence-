@@ -39,22 +39,32 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
     <!-- MAIN CONTAINER -->
     <div class="container py-5">
       <div class="request-wrapper mx-auto" style="max-width: 400px">
+        <div
+          id="successMsg"
+          class="alert alert-success m-3 mb-0"
+          style="display: none"
+        >
+          Request submitted successfully.
+        </div>
+
         <!-- HEADER -->
         <div class="greyhead text-center">SUBMIT MAINTENANCE REQUEST</div>
 
         <!-- FORM -->
-        <div class="p-3">
+        <form class="p-3" onsubmit="handleSubmitRequest(event)">
           <!-- ISSUE CATEGORY -->
           <div class="mb-3">
             <label class="form-label fw-bold">ISSUE CATEGORY</label>
-            <select class="form-control">
-              <option selected disabled>Select Category</option>
+            <select class="form-control" required>
+              <option selected disabled value="">Select category</option>
               <option>Plumbing</option>
               <option>Electrical</option>
               <option>IT</option>
@@ -65,8 +75,8 @@
           <!-- CAMPUS -->
           <div class="mb-3">
             <label class="form-label fw-bold">CAMPUS</label>
-            <select class="form-control">
-              <option selected disabled>Select Campus</option>
+            <select class="form-control" required>
+              <option selected disabled value="">Select campus</option>
               <option>Keele</option>
               <option>Glendon</option>
               <option>Markham</option>
@@ -76,8 +86,8 @@
           <!-- BUILDING -->
           <div class="mb-3">
             <label class="form-label fw-bold">BUILDING</label>
-            <select class="form-control">
-              <option selected disabled>Select Building</option>
+            <select class="form-control" required>
+              <option selected disabled value="">Select building</option>
               <option>Vari Hall</option>
               <option>Curtis Lecture Hall</option>
               <option>Accolade West</option>
@@ -102,15 +112,31 @@
               class="form-control"
               rows="4"
               placeholder="Describe the issue in detail..."
+              required
             ></textarea>
           </div>
 
           <!-- SUBMIT BUTTON -->
-          <button class="btn btn-primary w-100 mt-2">SUBMIT REQUEST</button>
-        </div>
+          <button type="submit" class="btn btn-primary w-100 mt-2">
+            SUBMIT REQUEST
+          </button>
+        </form>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      function handleSubmitRequest(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const successMsg = document.getElementById("successMsg");
+
+        successMsg.style.display = "block";
+        form.reset();
+        successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
