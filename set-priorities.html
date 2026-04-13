@@ -11,8 +11,6 @@
     <title>Set Priorities</title>
   </head>
   <body>
-    
-
     <div class="header">Set Priorities</div>
 
     <div class="page-shell">
@@ -38,8 +36,8 @@
           <div class="menu-section">
             <p class="menu-heading">Administration</p>
             <a href="manage-users.html" class="menu-item">Manage Users</a>
-          
-            <a href="account-info.html" class="menu-item">Account Information</a></div>
+            <a href="account-info.html" class="menu-item">Account Information</a>
+          </div>
 
           <a
             href="login.html"
@@ -50,6 +48,14 @@
         </aside>
 
         <main class="settings-content">
+          <div
+            id="successMsg"
+            class="alert alert-success"
+            style="display: none"
+          >
+            Priority updated successfully.
+          </div>
+
           <div class="page-title-block mb-4">
             <h1>Set Priorities</h1>
             <p>Choose a request and update its urgency level.</p>
@@ -60,10 +66,11 @@
               <div class="request-wrapper" style="max-width: 100%">
                 <div class="greyhead text-center">Priority Form</div>
                 <div class="request-body">
-                  <form action="#" method="get">
+                  <form onsubmit="handlePriorityUpdate(event)">
                     <div class="mb-3">
                       <label class="form-label fw-bold">Select Request ID</label>
-                      <select class="form-control">
+                      <select class="form-control" required>
+                        <option value="">Select request</option>
                         <option>REQ-1001</option>
                         <option>REQ-1002</option>
                         <option>REQ-1003</option>
@@ -73,7 +80,8 @@
 
                     <div class="mb-3">
                       <label class="form-label fw-bold">Set Priority Level</label>
-                      <select class="form-control">
+                      <select class="form-control" required>
+                        <option value="">Select priority</option>
                         <option>Low</option>
                         <option>Medium</option>
                         <option>High</option>
@@ -81,7 +89,7 @@
                       </select>
                     </div>
 
-                    <button type="button" class="btn btn-primary w-100 mt-2">
+                    <button type="submit" class="btn btn-primary w-100 mt-2">
                       Update Priority
                     </button>
                   </form>
@@ -103,6 +111,19 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      function handlePriorityUpdate(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const successMsg = document.getElementById("successMsg");
+
+        successMsg.style.display = "block";
+        form.reset();
+        successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
